@@ -1,0 +1,132 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  AI-Column — конфигурация сервера
+#  1) cp config/config.example.yaml config/config.yaml
+#  2) секреты (ключи API, токен) — в server/.env, сюда подставляются как ${ИМЯ}
+#     или ${ИМЯ:-значение_по_умолчанию}
+#  3) проверка без запуска: npm run check-config
+# ─────────────────────────────────────────────────────────────────────────────
+
+server:
+  host: 0.0.0.0
+  port: ${PORT:-8080}
+  auth_token: ${AUTH_TOKEN:-}      # тот же токен прописывается в прошивку (secrets.h); пусто = без защиты
+  db_path: ./data/ai-column.db     # история и настройки колонок (SQLite)
+  mdns: true                       # колонка найдёт сервер в сети сама (_aicolumn._tcp)
+  timezone: Europe/Moscow
+  log_level: info                  # debug | info | warn | error
+
+assistant:
+  name: Джарвис
+  # {assistant} и {agent} подставятся автоматически
+  persona: |
+    Ты — голосовой помощник умной колонки по имени {assistant}. Сейчас отвечаешь ты, агент {agent}.
+    Твой ответ будет озвучен синтезатором речи, поэтому:
+    - говори по-русски, коротко и по делу: обычно одно-три предложения;
+    - никакого markdown, списков, таблиц, эмодзи и ссылок;
+    - числа, даты и единицы пиши словами там, где так проще произнести;
+    - если вопрос сложный, дай суть и предложи рассказать подробнее.
+  history_turns: 8                 # сколько последних обменов репликами помнить
+  idle_reset_minutes: 15           # после стольких минут тишины разговор начинается заново
+  max_utterance_seconds: 20        # максимальная длина одной фразы с колонки
+
+# Как выбирается агент для каждой фразы (по порядку):
+#  1. голосовое обращение: «Клод, …», «Спроси Квен …»  (voice_prefix)
+#  2. агент, выбранный на колонке (тач/кнопка), если там не «Авто»
+#  3. правила по ключевым словам (rules)
+#  4. классификатор — маленькая быстрая модель решает, кому отдать вопрос
+#  5. default_agent
+# Если агент не ответил/лежит — пробуем следующих из fallback.
+# Голосом можно переключать: «переключись на Кими», «переключись на авто»,
+# сбросить разговор: «новый разговор», «забудь всё».
+router:
+  default: auto
+  default_agent: qwen
+  voice_prefix: true
+  fallback: [qwen, claude, kimi]
+  classifier:
+    agent: qwen
+    timeout_ms: 2500
+  rules:
+    - agent: claude
+      keywords: [код, программ, алгоритм, докажи, объясни подробно, сочини, напиши текст]
+
+speech:
+  # Частота звука, который сервер отправляет на колонку (прошивка тоже говорит её в hello)
+  play_rate: 24000
+  stt:
+    # openai     — OpenAI-совместимый /v1/audio/transcriptions: speaches (faster-whisper), vLLM, LocalAI, OpenAI, Groq
+    # whispercpp — сервер whisper.cpp (examples/server), POST /inference
+    # mock       — заглушка для тестов
+    provider: openai
+    base_url: ${STT_URL:-http://localhost:8000/v1}
+    api_key: ${STT_API_KEY:-none}
+    model: Systran/faster-whisper-medium
+    language: ru
+    timeout_ms: 20000
+  tts:
+    # piper  — python3 -m piper.http_server -m ru_RU-irina-medium   (POST /synthesize)
+    # openai — OpenAI-совместимый /v1/audio/speech (OpenAI, speaches, LocalAI, …)
+    # mock   — заглушка (пищит вместо речи)
+    provider: piper
+    base_url: ${TTS_URL:-http://localhost:5000}
+    voice: ru_RU-irina-medium      # для openai: имя голоса, например alloy
+    # model: tts-1                 # только для provider: openai
+    speed: 1.0
+    timeout_ms: 20000
+
+tools:
+  # datetime, weather (open-meteo, без ключа), volume, lights, timer,
+  # ask_agent (агент спрашивает другого агента), switch_agent
+  enabled: [datetime, weather, volume, lights, timer, ask_agent, switch_agent]
+  weather:
+    default_city: Москва           # поменяй на свой город
+
+agents:
+  # ── Claude (облако Anthropic) ────────────────────────────────────────────
+  - id: claude
+    name: Claude
+    color: "#D97757"
+    provider: anthropic
+    model: claude-sonnet-5-5       # самый быстрый — claude-haiku-4-5-20251001
+    api_key: ${ANTHROPIC_API_KEY:-}
+    aliases: [клод, клода, клоду, клауд, claude]
+    description: сложные вопросы, рассуждения, код, длинные объяснения
+    max_tokens: 700
+
+  # ── Qwen локально через Ollama ───────────────────────────────────────────
+  #   ollama pull qwen3:8b
+  - id: qwen
+    name: Qwen
+    color: "#7B61FF"
+    provider: openai
+    base_url: ${OLLAMA_URL:-http://localhost:11434/v1}
+    api_key: ollama
+    model: qwen3:8b
+    aliases: [квен, квин, куэн, qwen]
+    description: быстрые бытовые вопросы, болтовня, управление колонкой; локально и бесплатно
+    no_think: true                 # Qwen3: не тратить время на «рассуждения» вслух
+    max_tokens: 500
+    first_token_timeout_ms: 15000
+
+  # ── Kimi (Moonshot) — локально через vLLM или облачный API ───────────────
+  #   Kimi K2 — огромная MoE-модель: локально нужен очень мощный сервер.
+  #   Облако: base_url https://api.moonshot.ai/v1, ключ KIMI_API_KEY, модель — из их документации.
+  - id: kimi
+    name: Kimi
+    color: "#1E88E5"
+    provider: openai
+    base_url: ${KIMI_URL:-http://localhost:8001/v1}
+    api_key: ${KIMI_API_KEY:-none}
+    model: ${KIMI_MODEL:-moonshotai/Kimi-K2-Instruct}
+    aliases: [кими, кимми, ким, kimi]
+    description: длинные тексты, поиск идей, вторая точка зрения
+    max_tokens: 700
+
+  # ── Тестовый агент без нейросети — включи, чтобы проверить колонку ───────
+  - id: echo
+    name: Эхо
+    color: "#9E9E9E"
+    provider: echo
+    enabled: false
+    aliases: [эхо, тест]
+    description: тестовый агент, повторяет сказанное

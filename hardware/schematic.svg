@@ -1,0 +1,823 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1890" viewBox="0 0 2400 1890" font-family="'DejaVu Sans','Segoe UI',Roboto,Arial,sans-serif">
+<title>Умная колонка на ESP32-S3 — схема соединений</title>
+<rect width="2400" height="1890" fill="#ffffff"/>
+<path d="M 1010 540 L 990 540 L 990 260 L 590 260 L 590 330" fill="none" stroke="#e64980" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 640 330 L 640 260" fill="none" stroke="#e64980" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 860 330 L 860 260" fill="none" stroke="#e64980" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 910 330 L 910 266 A 6 6 0 0 0 910 254 L 910 194" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 810 330 L 810 266 A 6 6 0 0 0 810 254 L 810 194" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 600 844 L 580 844 L 580 876" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 600 876 L 440 876 L 440 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 600 908 L 460 908 L 460 1464 A 6 6 0 0 1 460 1476 L 460 1492 L 2340 1492 L 2340 172 L 1560 172 L 1560 188 A 6 6 0 0 1 1560 200 L 1560 630" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 790 1374 L 825 1374 L 825 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 790 1406 L 805 1406 L 805 1464 A 6 6 0 0 1 805 1476 L 805 1492" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1180 L 968 1180 L 968 1396" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 968 1424 L 968 1464 A 6 6 0 0 1 968 1476 L 968 1492" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1212 L 994 1212 L 994 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1300 240 L 1300 200 A 6 6 0 0 0 1300 188 L 1300 150 L 2360 150 L 2360 1514 L 230 1514 L 230 900" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1400 420 L 1440 420" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1374 480 L 1440 480 L 1440 194" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1515 800 L 1515 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1542 800 L 1542 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1569 800 L 1569 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1596 800 L 1596 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1623 800 L 1623 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1650 800 L 1650 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1677 800 L 1677 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1704 800 L 1704 830" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1704 830 L 1515 830 L 1515 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1560 560 L 1676 560" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1684 560 L 1800 560" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1920 630 L 1800 630 L 1800 194" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1920 600 L 1870 600 L 1870 200 A 6 6 0 0 0 1870 188 L 1870 172" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1800 520 L 1831 520" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1839 520 L 1870 520" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1420 990 L 1420 1212 L 1230 1212" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1280 990 L 1280 1180 L 1230 1180" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 300 900 L 300 1470 L 2320 1470 L 2320 194 L 690 194 L 690 254 A 6 6 0 0 1 690 266 L 690 330" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 290 1600 L 315 1600 L 315 1545 L 780 1545" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 290 1680 L 300 1680 L 300 1800 L 860 1800 L 860 1735" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 340 1595 L 330 1595 L 330 1660" fill="none" stroke="#495057" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 716 1595 L 726 1595 L 726 1660" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 740 1690 L 780 1690 L 780 1520 A 6 6 0 0 0 780 1508 L 780 1498 A 6 6 0 0 0 780 1486 L 780 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 740 1735 L 905 1735" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 975 1735 L 1010 1735" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1090 1735 L 1150 1735 L 1150 1514" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1290 1600 L 1290 1514" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1340 1600 L 1340 1520 A 6 6 0 0 0 1340 1508 L 1340 1498 A 6 6 0 0 0 1340 1486 L 1340 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1480 1600 L 1480 1520 A 6 6 0 0 0 1480 1508 L 1480 1498 A 6 6 0 0 0 1480 1486 L 1480 1470" fill="none" stroke="#212529" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1530 1600 L 1530 1520 A 6 6 0 0 0 1530 1508 L 1530 1492" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 636 L 970 636 L 970 460 L 590 460 L 590 420" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 810 420 L 810 460" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 668 L 950 668 L 950 480 L 640 480 L 640 466 A 6 6 0 0 0 640 454 L 640 420" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 860 420 L 860 454 A 6 6 0 0 1 860 466 L 860 480" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 700 L 930 700 L 930 500 L 690 500 L 690 486 A 6 6 0 0 0 690 474 L 690 466 A 6 6 0 0 0 690 454 L 690 420" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 910 420 L 910 454 A 6 6 0 0 1 910 466 L 910 474 A 6 6 0 0 1 910 486 L 910 500" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 732 L 790 732" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 764 L 790 764" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 796 L 790 796" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 600 748 L 410 748" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 600 780 L 410 780" fill="none" stroke="#212529" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 170 700 L 130 700" fill="none" stroke="#8d5524" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 170 740 L 130 740" fill="none" stroke="#8d5524" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 828 L 800 828 L 800 990 L 790 990" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 860 L 818 860 L 818 1022 L 790 1022" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 892 L 836 892 L 836 1054 L 790 1054" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 988 L 854 988 L 854 1086 L 790 1086" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1020 L 872 1020 L 872 1118 L 790 1118" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1052 L 890 1052 L 890 1182 L 790 1182" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1084 L 908 1084 L 908 1278 L 790 1278" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1116 L 926 1116 L 926 1310 L 790 1310" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1010 1148 L 944 1148 L 944 1342 L 790 1342" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 836 1054 L 836 1080 A 6 6 0 0 1 836 1092 L 836 1112 A 6 6 0 0 1 836 1124 L 836 1176 A 6 6 0 0 1 836 1188 L 836 1208 A 6 6 0 0 1 836 1220 L 836 1246 L 790 1246" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 872 1118 L 872 1176 A 6 6 0 0 1 872 1188 L 872 1214 L 790 1214" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1300 320 L 1300 420" fill="none" stroke="#5c940d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1230 636 L 1300 636 L 1300 420" fill="none" stroke="#5c940d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1300 420 L 1340 420" fill="none" stroke="#5c940d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1300 480 L 1366 480" fill="none" stroke="#5c940d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1230 668 L 1500 668" fill="none" stroke="#c99700" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1720 668 L 1835 668" fill="none" stroke="#c99700" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1895 668 L 1920 668" fill="none" stroke="#c99700" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1230 700 L 1420 700 L 1420 930" fill="none" stroke="#5c677d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1230 732 L 1280 732 L 1280 930" fill="none" stroke="#5c677d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 456 1595 L 470 1595" fill="none" stroke="#868e96" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 463 1595 L 463 1660" fill="none" stroke="#868e96" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 586 1595 L 600 1595" fill="none" stroke="#868e96" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 593 1595 L 593 1660" fill="none" stroke="#868e96" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 910 266 A 6 6 0 0 0 910 254" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 910 266 A 6 6 0 0 0 910 254" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 810 266 A 6 6 0 0 0 810 254" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 810 266 A 6 6 0 0 0 810 254" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 640 466 A 6 6 0 0 0 640 454" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 640 466 A 6 6 0 0 0 640 454" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 860 454 A 6 6 0 0 1 860 466" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 860 454 A 6 6 0 0 1 860 466" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 690 466 A 6 6 0 0 0 690 454" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 690 466 A 6 6 0 0 0 690 454" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 690 486 A 6 6 0 0 0 690 474" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 690 486 A 6 6 0 0 0 690 474" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 910 454 A 6 6 0 0 1 910 466" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 910 454 A 6 6 0 0 1 910 466" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 910 474 A 6 6 0 0 1 910 486" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 910 474 A 6 6 0 0 1 910 486" fill="none" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 460 1464 A 6 6 0 0 1 460 1476" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 460 1464 A 6 6 0 0 1 460 1476" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1560 188 A 6 6 0 0 1 1560 200" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1560 188 A 6 6 0 0 1 1560 200" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 836 1080 A 6 6 0 0 1 836 1092" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 836 1080 A 6 6 0 0 1 836 1092" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 836 1112 A 6 6 0 0 1 836 1124" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 836 1112 A 6 6 0 0 1 836 1124" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 836 1176 A 6 6 0 0 1 836 1188" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 836 1176 A 6 6 0 0 1 836 1188" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 836 1208 A 6 6 0 0 1 836 1220" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 836 1208 A 6 6 0 0 1 836 1220" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 872 1176 A 6 6 0 0 1 872 1188" fill="none" stroke="#ffffff" stroke-width="5.4"/>
+<path d="M 872 1176 A 6 6 0 0 1 872 1188" fill="none" stroke="#1c7ed6" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 805 1464 A 6 6 0 0 1 805 1476" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 805 1464 A 6 6 0 0 1 805 1476" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 968 1464 A 6 6 0 0 1 968 1476" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 968 1464 A 6 6 0 0 1 968 1476" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1300 200 A 6 6 0 0 0 1300 188" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1300 200 A 6 6 0 0 0 1300 188" fill="none" stroke="#d62828" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1870 200 A 6 6 0 0 0 1870 188" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1870 200 A 6 6 0 0 0 1870 188" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 690 254 A 6 6 0 0 1 690 266" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 690 254 A 6 6 0 0 1 690 266" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 780 1498 A 6 6 0 0 0 780 1486" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 780 1498 A 6 6 0 0 0 780 1486" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 780 1520 A 6 6 0 0 0 780 1508" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 780 1520 A 6 6 0 0 0 780 1508" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1340 1498 A 6 6 0 0 0 1340 1486" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1340 1498 A 6 6 0 0 0 1340 1486" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1340 1520 A 6 6 0 0 0 1340 1508" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1340 1520 A 6 6 0 0 0 1340 1508" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1480 1498 A 6 6 0 0 0 1480 1486" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1480 1498 A 6 6 0 0 0 1480 1486" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1480 1520 A 6 6 0 0 0 1480 1508" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1480 1520 A 6 6 0 0 0 1480 1508" fill="none" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M 1530 1520 A 6 6 0 0 0 1530 1508" fill="none" stroke="#ffffff" stroke-width="6.4"/>
+<path d="M 1530 1520 A 6 6 0 0 0 1530 1508" fill="none" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<text x="40" y="50" font-size="27" text-anchor="start" font-weight="bold" fill="#1f2328">Умная колонка на ESP32-S3 — полная схема соединений</text>
+<text x="40" y="80" font-size="14" text-anchor="start" font-weight="normal" fill="#495057">ESP32-S3-DevKitC-1 N16R8 · TFT ILI9341 + тач XPT2046 · 2× INMP441 · PCM5102A · TPA3116D2 · WS2812B 8×8 · 74AHCT125 · MP1584EN · АКБ 3S Li-ion</text>
+<rect x="1010" y="500" width="220" height="762" rx="10" fill="#1d2b3a" stroke="#0b1520" stroke-width="2"/>
+<text x="1120.0" y="490" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#1f2328">ESP32-S3-DevKitC-1 (N16R8)</text>
+<text x="1018" y="520" font-size="11" text-anchor="start" font-weight="bold" fill="#8fa3b8">J1</text>
+<text x="1222" y="520" font-size="11" text-anchor="end" font-weight="bold" fill="#8fa3b8">J3</text>
+<rect x="1084" y="548" width="72" height="150" rx="3" fill="#c9ced6" stroke="#8a939e" stroke-width="1.5"/>
+<text x="1114" y="623" font-size="11" text-anchor="middle" font-weight="bold" fill="#343a40" transform="rotate(-90 1114 623)">ESP32-S3-WROOM-1</text>
+<text x="1132" y="623" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#343a40" transform="rotate(-90 1132 623)">16 МБ Flash · 8 МБ PSRAM</text>
+<rect x="1045" y="1252" width="46" height="24" rx="5" fill="#adb5bd" stroke="#495057" stroke-width="1.5"/>
+<text x="1068" y="1246" font-size="9.5" text-anchor="middle" font-weight="bold" fill="#dee2e6">UART</text>
+<rect x="1150" y="1252" width="46" height="24" rx="5" fill="#adb5bd" stroke="#495057" stroke-width="1.5"/>
+<text x="1173" y="1246" font-size="9.5" text-anchor="middle" font-weight="bold" fill="#dee2e6">USB</text>
+<text x="1120" y="1294" font-size="11" text-anchor="middle" font-weight="normal" fill="#495057">прошивка — по USB-C</text>
+<rect x="1006" y="536" width="8" height="8" rx="1.5" fill="#e64980" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="544" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">3V3</text>
+<rect x="1006" y="568" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="576" font-size="11" text-anchor="start" font-weight="normal" fill="#7d8fa3">3V3</text>
+<rect x="1006" y="600" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="608" font-size="11" text-anchor="start" font-weight="normal" fill="#7d8fa3">RST (EN)</text>
+<rect x="1006" y="632" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="640" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO4</text>
+<rect x="1006" y="664" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="672" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO5</text>
+<rect x="1006" y="696" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="704" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO6</text>
+<rect x="1006" y="728" width="8" height="8" rx="1.5" fill="#7048e8" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="736" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO7</text>
+<rect x="1006" y="760" width="8" height="8" rx="1.5" fill="#7048e8" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="768" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO15</text>
+<rect x="1006" y="792" width="8" height="8" rx="1.5" fill="#7048e8" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="800" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO16</text>
+<rect x="1006" y="824" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="832" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO17</text>
+<rect x="1006" y="856" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="864" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO18</text>
+<rect x="1006" y="888" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="896" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO8</text>
+<rect x="1006" y="920" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="928" font-size="11" text-anchor="start" font-weight="normal" fill="#7d8fa3">GPIO3 · strap</text>
+<rect x="1006" y="952" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="960" font-size="11" text-anchor="start" font-weight="normal" fill="#7d8fa3">GPIO46 · strap</text>
+<rect x="1006" y="984" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="992" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO9</text>
+<rect x="1006" y="1016" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1024" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO10</text>
+<rect x="1006" y="1048" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1056" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO11</text>
+<rect x="1006" y="1080" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1088" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO12</text>
+<rect x="1006" y="1112" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1120" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO13</text>
+<rect x="1006" y="1144" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1152" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GPIO14</text>
+<rect x="1006" y="1176" width="8" height="8" rx="1.5" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1184" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">5V</text>
+<rect x="1006" y="1208" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1019" y="1216" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GND</text>
+<rect x="1226" y="536" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="544" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">GND</text>
+<rect x="1226" y="568" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="576" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">TX · 43</text>
+<rect x="1226" y="600" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="608" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">RX · 44</text>
+<rect x="1226" y="632" width="8" height="8" rx="1.5" fill="#5c940d" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="640" font-size="11" text-anchor="end" font-weight="bold" fill="#ffffff">GPIO1</text>
+<rect x="1226" y="664" width="8" height="8" rx="1.5" fill="#c99700" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="672" font-size="11" text-anchor="end" font-weight="bold" fill="#ffffff">GPIO2</text>
+<rect x="1226" y="696" width="8" height="8" rx="1.5" fill="#5c677d" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="704" font-size="11" text-anchor="end" font-weight="bold" fill="#ffffff">GPIO42</text>
+<rect x="1226" y="728" width="8" height="8" rx="1.5" fill="#5c677d" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="736" font-size="11" text-anchor="end" font-weight="bold" fill="#ffffff">GPIO41</text>
+<rect x="1226" y="760" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="768" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">GPIO40</text>
+<rect x="1226" y="792" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="800" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">GPIO39</text>
+<rect x="1226" y="824" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="832" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">GPIO38</text>
+<rect x="1226" y="856" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="864" font-size="10.5" text-anchor="end" font-weight="normal" fill="#ff8787">PSRAM ✕ GPIO37</text>
+<rect x="1226" y="888" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="896" font-size="10.5" text-anchor="end" font-weight="normal" fill="#ff8787">PSRAM ✕ GPIO36</text>
+<rect x="1226" y="920" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="928" font-size="10.5" text-anchor="end" font-weight="normal" fill="#ff8787">PSRAM ✕ GPIO35</text>
+<rect x="1226" y="952" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="960" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">BOOT · GPIO0</text>
+<rect x="1226" y="984" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="992" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">strap · GPIO45</text>
+<rect x="1226" y="1016" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1024" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">RGB · GPIO48</text>
+<rect x="1226" y="1048" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1056" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">GPIO47</text>
+<rect x="1226" y="1080" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1088" font-size="11" text-anchor="end" font-weight="normal" fill="#7d8fa3">GPIO21</text>
+<rect x="1226" y="1112" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1120" font-size="10.5" text-anchor="end" font-weight="normal" fill="#ff8787">USB D+ · GPIO20</text>
+<rect x="1226" y="1144" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1152" font-size="10.5" text-anchor="end" font-weight="normal" fill="#ff8787">USB D− · GPIO19</text>
+<rect x="1226" y="1176" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1184" font-size="11" text-anchor="end" font-weight="bold" fill="#ffffff">GND</text>
+<rect x="1226" y="1208" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1221" y="1216" font-size="11" text-anchor="end" font-weight="bold" fill="#ffffff">GND</text>
+<rect x="560" y="330" width="160" height="90" rx="8" fill="#eaf7ee" stroke="#2f9e44" stroke-width="1.8"/>
+<text x="640" y="375" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1f2328">INMP441 · Mic B</text>
+<text x="640" y="391" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">L/R → 3V3 = правый</text>
+<rect x="586" y="326" width="8" height="8" rx="1.5" fill="#e64980" stroke="#ffffff" stroke-width="1"/>
+<text x="590" y="347" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">L/R</text>
+<rect x="636" y="326" width="8" height="8" rx="1.5" fill="#e64980" stroke="#ffffff" stroke-width="1"/>
+<text x="640" y="347" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">VDD</text>
+<rect x="686" y="326" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="690" y="347" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">GND</text>
+<rect x="586" y="416" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="590" y="411" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">SCK</text>
+<rect x="636" y="416" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="640" y="411" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">WS</text>
+<rect x="686" y="416" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="690" y="411" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">SD</text>
+<rect x="780" y="330" width="160" height="90" rx="8" fill="#eaf7ee" stroke="#2f9e44" stroke-width="1.8"/>
+<text x="860" y="375" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1f2328">INMP441 · Mic A</text>
+<text x="860" y="391" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">L/R → GND = левый</text>
+<rect x="806" y="326" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="810" y="347" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">L/R</text>
+<rect x="856" y="326" width="8" height="8" rx="1.5" fill="#e64980" stroke="#ffffff" stroke-width="1"/>
+<text x="860" y="347" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">VDD</text>
+<rect x="906" y="326" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="910" y="347" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">GND</text>
+<rect x="806" y="416" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="810" y="411" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">SCK</text>
+<rect x="856" y="416" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="860" y="411" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">WS</text>
+<rect x="906" y="416" width="8" height="8" rx="1.5" fill="#2f9e44" stroke="#ffffff" stroke-width="1"/>
+<text x="910" y="411" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">SD</text>
+<text x="560" y="540" font-size="11" text-anchor="start" font-weight="bold" fill="#2f9e44">I2S0 (оба микрофона на одной шине):</text>
+<text x="560" y="556" font-size="11" text-anchor="start" font-weight="normal" fill="#2f9e44">SCK → GPIO4 · WS → GPIO5 · SD → GPIO6</text>
+<rect x="600" y="680" width="190" height="255" rx="8" fill="#f1edff" stroke="#7048e8" stroke-width="1.8"/>
+<text x="695" y="699" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1f2328">PCM5102A · ЦАП</text>
+<text x="695" y="714" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">I2S1, выход — линейный</text>
+<rect x="786" y="728" width="8" height="8" rx="1.5" fill="#7048e8" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="736" font-size="11" text-anchor="end" font-weight="normal" fill="#1f2328">BCK ← GPIO7</text>
+<rect x="786" y="760" width="8" height="8" rx="1.5" fill="#7048e8" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="768" font-size="11" text-anchor="end" font-weight="normal" fill="#1f2328">LCK ← GPIO15</text>
+<rect x="786" y="792" width="8" height="8" rx="1.5" fill="#7048e8" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="800" font-size="11" text-anchor="end" font-weight="normal" fill="#1f2328">DIN ← GPIO16</text>
+<rect x="596" y="744" width="8" height="8" rx="1.5" fill="#0c8599" stroke="#ffffff" stroke-width="1"/>
+<text x="609" y="752" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">LOUT</text>
+<rect x="596" y="776" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="609" y="784" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">AGND</text>
+<rect x="596" y="808" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="609" y="816" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">ROUT</text>
+<line x1="600" y1="812" x2="586" y2="812" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="582" y1="808" x2="590" y2="816" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<line x1="582" y1="816" x2="590" y2="808" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="596" y="840" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="609" y="848" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">SCK</text>
+<rect x="596" y="872" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="609" y="880" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">GND</text>
+<rect x="596" y="904" width="8" height="8" rx="1.5" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="609" y="912" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">VIN (5 В)</text>
+<text x="782" y="846" font-size="10" text-anchor="end" font-weight="normal" fill="#495057">на обороте:</text>
+<text x="782" y="862" font-size="10.5" text-anchor="end" font-weight="bold" fill="#7048e8">1-L 2-L 3-H 4-L</text>
+<text x="782" y="878" font-size="9" text-anchor="end" font-weight="normal" fill="#495057">(FLT DEMP XSMT FMT)</text>
+<text x="782" y="898" font-size="10" text-anchor="end" font-weight="normal" fill="#e03131">SCK обязательно</text>
+<text x="782" y="912" font-size="10" text-anchor="end" font-weight="normal" fill="#e03131">на GND</text>
+<rect x="170" y="640" width="240" height="260" rx="8" fill="#e6f6f7" stroke="#0c8599" stroke-width="1.8"/>
+<text x="290" y="662" font-size="13" text-anchor="middle" font-weight="bold" fill="#1f2328">TPA3116D2</text>
+<text x="290" y="678" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">класс D, питание 9–12,6 В</text>
+<rect x="406" y="744" width="8" height="8" rx="1.5" fill="#0c8599" stroke="#ffffff" stroke-width="1"/>
+<text x="401" y="752" font-size="11" text-anchor="end" font-weight="normal" fill="#1f2328">IN L</text>
+<rect x="406" y="776" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="401" y="784" font-size="11" text-anchor="end" font-weight="normal" fill="#1f2328">IN GND</text>
+<rect x="406" y="808" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="401" y="816" font-size="11" text-anchor="end" font-weight="normal" fill="#1f2328">IN R</text>
+<line x1="410" y1="812" x2="424" y2="812" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="420" y1="808" x2="428" y2="816" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<line x1="420" y1="816" x2="428" y2="808" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="166" y="696" width="8" height="8" rx="1.5" fill="#8d5524" stroke="#ffffff" stroke-width="1"/>
+<text x="179" y="704" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">L+</text>
+<rect x="166" y="736" width="8" height="8" rx="1.5" fill="#8d5524" stroke="#ffffff" stroke-width="1"/>
+<text x="179" y="744" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">L−</text>
+<rect x="166" y="796" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="179" y="804" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">R+</text>
+<line x1="170" y1="800" x2="156" y2="800" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="152" y1="796" x2="160" y2="804" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<line x1="152" y1="804" x2="160" y2="796" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="166" y="836" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="179" y="844" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">R−</text>
+<line x1="170" y1="840" x2="156" y2="840" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="152" y1="836" x2="160" y2="844" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<line x1="152" y1="844" x2="160" y2="836" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="226" y="896" width="8" height="8" rx="1.5" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<text x="230" y="891" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">VCC+</text>
+<rect x="296" y="896" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="300" y="891" font-size="11" text-anchor="middle" font-weight="normal" fill="#1f2328">GND</text>
+<text x="290" y="866" font-size="9.5" text-anchor="middle" font-weight="italic" fill="#495057">моно: в прошивке L = (L+R)/2</text>
+<rect x="30" y="650" width="100" height="140" rx="8" fill="#fbf4ee" stroke="#8d5524" stroke-width="1.8"/>
+<rect x="46" y="690" width="26" height="60" rx="2" fill="#8d5524" stroke="#5c3a1a" stroke-width="1.5"/>
+<path d="M 72 690 L 108 666 L 108 774 L 72 750 Z" fill="#d9b99b" stroke="#5c3a1a" stroke-width="1.5"/>
+<rect x="126" y="696" width="8" height="8" rx="1.5" fill="#8d5524" stroke="#ffffff" stroke-width="1"/>
+<rect x="126" y="736" width="8" height="8" rx="1.5" fill="#8d5524" stroke="#ffffff" stroke-width="1"/>
+<text x="122" y="684" font-size="13" text-anchor="end" font-weight="bold" fill="#8d5524">+</text>
+<text x="122" y="766" font-size="13" text-anchor="end" font-weight="bold" fill="#8d5524">−</text>
+<text x="30" y="812" font-size="11.5" text-anchor="start" font-weight="bold" fill="#1f2328">Динамик 45 мм</text>
+<text x="30" y="828" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">4 Ом · 10 Вт</text>
+<text x="30" y="960" font-size="11" text-anchor="start" font-weight="bold" fill="#e03131">Выход усилителя мостовой:</text>
+<text x="30" y="976" font-size="11" text-anchor="start" font-weight="normal" fill="#e03131">L− — это НЕ земля,</text>
+<text x="30" y="992" font-size="11" text-anchor="start" font-weight="normal" fill="#e03131">не соединяй его с GND.</text>
+<text x="30" y="1020" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">ЦАП даёт до 2,1 В, усилитель</text>
+<text x="30" y="1036" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">×20 (26 дБ): на полной</text>
+<text x="30" y="1052" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">громкости динамик 10 Вт</text>
+<text x="30" y="1068" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">перегреется. Потолок</text>
+<text x="30" y="1084" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">громкости в прошивке −16 дБ</text>
+<text x="30" y="1100" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">(VOLUME_MAX_GAIN_DB в config.h).</text>
+<rect x="500" y="968" width="290" height="464" rx="8" fill="#e7f1ff" stroke="#1c7ed6" stroke-width="1.8"/>
+<text x="512" y="988" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">ILI9341 + XPT2046</text>
+<rect x="512" y="1000" width="128" height="416" rx="4" fill="#243b55" stroke="#10202f" stroke-width="1.5"/>
+<text x="576" y="1208" font-size="13" text-anchor="middle" font-weight="bold" fill="#dbe7f5" transform="rotate(-90 576 1208)">TFT 2,4″ / 2,8″ 320×240</text>
+<text x="598" y="1208" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#9fb6cf" transform="rotate(-90 598 1208)">SPI, питание 5 В (перемычку J1 не замыкать)</text>
+<rect x="786" y="986" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="994" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">14 T_IRQ ← GPIO17</text>
+<rect x="786" y="1018" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1026" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">13 T_DO ← GPIO18</text>
+<rect x="786" y="1050" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1058" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">12 T_DIN ← GPIO8</text>
+<rect x="786" y="1082" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1090" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">11 T_CS ← GPIO9</text>
+<rect x="786" y="1114" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1122" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">10 T_CLK ← GPIO10</text>
+<rect x="786" y="1146" width="8" height="8" rx="1.5" fill="#adb5bd" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1154" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">9 SDO — не подкл.</text>
+<line x1="790" y1="1150" x2="804" y2="1150" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="800" y1="1146" x2="808" y2="1154" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<line x1="800" y1="1154" x2="808" y2="1146" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="786" y="1178" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1186" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">8 LED ← GPIO11 (PWM)</text>
+<rect x="786" y="1210" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1218" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">7 SCK ← GPIO10</text>
+<rect x="786" y="1242" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1250" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">6 SDI ← GPIO8</text>
+<rect x="786" y="1274" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1282" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">5 DC ← GPIO12</text>
+<rect x="786" y="1306" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1314" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">4 RESET ← GPIO13</text>
+<rect x="786" y="1338" width="8" height="8" rx="1.5" fill="#1c7ed6" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1346" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">3 CS ← GPIO14</text>
+<rect x="786" y="1370" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1378" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">2 GND</text>
+<rect x="786" y="1402" width="8" height="8" rx="1.5" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="781" y="1410" font-size="10.5" text-anchor="end" font-weight="normal" fill="#1f2328">1 VCC (5 В)</text>
+<path d="M 968 1400 L 958 1420 L 978 1420 Z" fill="#343a40"/>
+<line x1="956" y1="1399" x2="980" y2="1399" stroke="#343a40" stroke-width="3" stroke-linecap="round"/>
+<line x1="968" y1="1396" x2="968" y2="1400" stroke="#343a40" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="968" y1="1420" x2="968" y2="1424" stroke="#343a40" stroke-width="2.4" stroke-linecap="round"/>
+<text x="950" y="1407" font-size="11" text-anchor="end" font-weight="bold" fill="#1f2328">D1 SS34</text>
+<text x="950" y="1421" font-size="10" text-anchor="end" font-weight="normal" fill="#495057">(1N5819)</text>
+<line x1="1300" y1="240" x2="1300" y2="248" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<line x1="1300" y1="312" x2="1300" y2="320" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<rect x="1292" y="248" width="16" height="64" rx="1" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<text x="1314" y="278.0" font-size="11.5" text-anchor="start" font-weight="bold" fill="#1f2328">R1</text>
+<text x="1314" y="293.0" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2328">100 кОм</text>
+<line x1="1340" y1="420" x2="1348" y2="420" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<line x1="1392" y1="420" x2="1400" y2="420" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<rect x="1348" y="413" width="44" height="14" rx="1" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<text x="1370.0" y="408" font-size="11" text-anchor="middle" font-weight="bold" fill="#1f2328">R2 22 кОм</text>
+<line x1="1366" y1="469" x2="1366" y2="491" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1374" y1="469" x2="1374" y2="491" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<text x="1370" y="506" font-size="11" text-anchor="middle" font-weight="bold" fill="#1f2328">C1 100 нФ</text>
+<text x="1318" y="208" font-size="10.5" text-anchor="start" font-weight="italic" fill="#495057">делитель АКБ</text>
+<rect x="1500" y="630" width="220" height="170" rx="8" fill="#2b2f36" stroke="#111418" stroke-width="1.8"/>
+<rect x="1496" y="664" width="8" height="8" rx="1.5" fill="#c99700" stroke="#ffffff" stroke-width="1"/>
+<text x="1509" y="672" font-size="11" text-anchor="start" font-weight="normal" fill="#ffffff">2 · 1A</text>
+<rect x="1716" y="664" width="8" height="8" rx="1.5" fill="#c99700" stroke="#ffffff" stroke-width="1"/>
+<text x="1711" y="672" font-size="11" text-anchor="end" font-weight="normal" fill="#ffffff">1Y · 3</text>
+<rect x="1556" y="626" width="8" height="8" rx="1.5" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="1560" y="647" font-size="11" text-anchor="middle" font-weight="normal" fill="#ffffff">14 VCC</text>
+<text x="1610" y="706" font-size="13" text-anchor="middle" font-weight="bold" fill="#ffffff">74AHCT125</text>
+<text x="1610" y="722" font-size="10" text-anchor="middle" font-weight="normal" fill="#ced4da">уровень 3,3 → 5 В</text>
+<text x="1610" y="742" font-size="10" text-anchor="middle" font-weight="normal" fill="#ffd8a8">1,4,5,7,9,10,12,13 → GND</text>
+<text x="1610" y="757" font-size="10" text-anchor="middle" font-weight="normal" fill="#ced4da">6, 8, 11 — не подключать</text>
+<rect x="1511" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1515" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">1</text>
+<rect x="1538" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1542" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">4</text>
+<rect x="1565" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1569" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">5</text>
+<rect x="1592" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1596" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">7</text>
+<rect x="1619" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1623" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">9</text>
+<rect x="1646" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1650" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">10</text>
+<rect x="1673" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1677" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">12</text>
+<rect x="1700" y="796" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1704" y="791" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#ffffff">13</text>
+<text x="1526" y="850" font-size="9.5" text-anchor="start" font-weight="italic" fill="#495057">DIP-14: ключ (выемка) — между выводами 1 и 14</text>
+<line x1="1835" y1="668" x2="1843" y2="668" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<line x1="1887" y1="668" x2="1895" y2="668" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<rect x="1843" y="661" width="44" height="14" rx="1" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<text x="1865.0" y="656" font-size="11" text-anchor="middle" font-weight="bold" fill="#1f2328">R3 330 Ом</text>
+<line x1="1676" y1="549" x2="1676" y2="571" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1684" y1="549" x2="1684" y2="571" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<text x="1680" y="540" font-size="11" text-anchor="middle" font-weight="bold" fill="#1f2328">C3 100 нФ</text>
+<rect x="1920" y="560" width="330" height="330" rx="8" fill="#16181c" stroke="#000000" stroke-width="1.8"/>
+<rect x="1916" y="596" width="8" height="8" rx="1.5" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="1929" y="604" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">+5V</text>
+<rect x="1916" y="626" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1929" y="634" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">GND</text>
+<rect x="1916" y="664" width="8" height="8" rx="1.5" fill="#c99700" stroke="#ffffff" stroke-width="1"/>
+<text x="1929" y="672" font-size="11" text-anchor="start" font-weight="bold" fill="#ffffff">DIN</text>
+<rect x="2003" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="598" r="5.5" fill="#ff3f3f"/>
+<rect x="2033" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="598" r="5.5" fill="#ff913f"/>
+<rect x="2063" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="598" r="5.5" fill="#ffe33f"/>
+<rect x="2093" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="598" r="5.5" fill="#c8ff3f"/>
+<rect x="2123" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="598" r="5.5" fill="#76ff3f"/>
+<rect x="2153" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="598" r="5.5" fill="#3fff5b"/>
+<rect x="2183" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="598" r="5.5" fill="#3fffad"/>
+<rect x="2213" y="589" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="598" r="5.5" fill="#3fffff"/>
+<rect x="2003" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="634" r="5.5" fill="#ff913f"/>
+<rect x="2033" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="634" r="5.5" fill="#ffe33f"/>
+<rect x="2063" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="634" r="5.5" fill="#c8ff3f"/>
+<rect x="2093" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="634" r="5.5" fill="#76ff3f"/>
+<rect x="2123" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="634" r="5.5" fill="#3fff5b"/>
+<rect x="2153" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="634" r="5.5" fill="#3fffad"/>
+<rect x="2183" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="634" r="5.5" fill="#3fffff"/>
+<rect x="2213" y="625" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="634" r="5.5" fill="#3fadff"/>
+<rect x="2003" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="670" r="5.5" fill="#ffe33f"/>
+<rect x="2033" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="670" r="5.5" fill="#c8ff3f"/>
+<rect x="2063" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="670" r="5.5" fill="#76ff3f"/>
+<rect x="2093" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="670" r="5.5" fill="#3fff5b"/>
+<rect x="2123" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="670" r="5.5" fill="#3fffad"/>
+<rect x="2153" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="670" r="5.5" fill="#3fffff"/>
+<rect x="2183" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="670" r="5.5" fill="#3fadff"/>
+<rect x="2213" y="661" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="670" r="5.5" fill="#3f5bff"/>
+<rect x="2003" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="706" r="5.5" fill="#c8ff3f"/>
+<rect x="2033" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="706" r="5.5" fill="#76ff3f"/>
+<rect x="2063" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="706" r="5.5" fill="#3fff5b"/>
+<rect x="2093" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="706" r="5.5" fill="#3fffad"/>
+<rect x="2123" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="706" r="5.5" fill="#3fffff"/>
+<rect x="2153" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="706" r="5.5" fill="#3fadff"/>
+<rect x="2183" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="706" r="5.5" fill="#3f5bff"/>
+<rect x="2213" y="697" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="706" r="5.5" fill="#763fff"/>
+<rect x="2003" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="742" r="5.5" fill="#76ff3f"/>
+<rect x="2033" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="742" r="5.5" fill="#3fff5b"/>
+<rect x="2063" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="742" r="5.5" fill="#3fffad"/>
+<rect x="2093" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="742" r="5.5" fill="#3fffff"/>
+<rect x="2123" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="742" r="5.5" fill="#3fadff"/>
+<rect x="2153" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="742" r="5.5" fill="#3f5bff"/>
+<rect x="2183" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="742" r="5.5" fill="#763fff"/>
+<rect x="2213" y="733" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="742" r="5.5" fill="#c83fff"/>
+<rect x="2003" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="778" r="5.5" fill="#3fff5b"/>
+<rect x="2033" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="778" r="5.5" fill="#3fffad"/>
+<rect x="2063" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="778" r="5.5" fill="#3fffff"/>
+<rect x="2093" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="778" r="5.5" fill="#3fadff"/>
+<rect x="2123" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="778" r="5.5" fill="#3f5bff"/>
+<rect x="2153" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="778" r="5.5" fill="#763fff"/>
+<rect x="2183" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="778" r="5.5" fill="#c83fff"/>
+<rect x="2213" y="769" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="778" r="5.5" fill="#ff3fe3"/>
+<rect x="2003" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="814" r="5.5" fill="#3fffad"/>
+<rect x="2033" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="814" r="5.5" fill="#3fffff"/>
+<rect x="2063" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="814" r="5.5" fill="#3fadff"/>
+<rect x="2093" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="814" r="5.5" fill="#3f5bff"/>
+<rect x="2123" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="814" r="5.5" fill="#763fff"/>
+<rect x="2153" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="814" r="5.5" fill="#c83fff"/>
+<rect x="2183" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="814" r="5.5" fill="#ff3fe3"/>
+<rect x="2213" y="805" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="814" r="5.5" fill="#ff3f91"/>
+<rect x="2003" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2012" cy="850" r="5.5" fill="#3fffff"/>
+<rect x="2033" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2042" cy="850" r="5.5" fill="#3fadff"/>
+<rect x="2063" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2072" cy="850" r="5.5" fill="#3f5bff"/>
+<rect x="2093" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2102" cy="850" r="5.5" fill="#763fff"/>
+<rect x="2123" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2132" cy="850" r="5.5" fill="#c83fff"/>
+<rect x="2153" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2162" cy="850" r="5.5" fill="#ff3fe3"/>
+<rect x="2183" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2192" cy="850" r="5.5" fill="#ff3f91"/>
+<rect x="2213" y="841" width="18" height="18" rx="3" fill="#f1f3f5" opacity="0.9"/><circle cx="2222" cy="850" r="5.5" fill="#ff3f3f"/>
+<text x="2085" y="910" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1f2328">WS2812B 8×8 (64 LED, 5 В)</text>
+<line x1="1831" y1="509" x2="1831" y2="531" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1839" y1="509" x2="1839" y2="531" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<text x="1848" y="510" font-size="12" text-anchor="middle" font-weight="bold" fill="#f08c00">+</text>
+<text x="1880" y="516" font-size="11" text-anchor="start" font-weight="bold" fill="#1f2328">C2 1000 мкФ</text>
+<text x="1880" y="531" font-size="10" text-anchor="start" font-weight="normal" fill="#495057">(электролит, ≥10 В)</text>
+<line x1="1280" y1="930" x2="1280" y2="945" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<line x1="1280" y1="975" x2="1280" y2="990" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<rect x="1265" y="945" width="30" height="30" rx="4" fill="#e9ecef" stroke="#495057" stroke-width="1.8"/>
+<circle cx="1280" cy="960" r="9" fill="#343a40"/>
+<circle cx="1265" cy="945" r="2" fill="#868e96"/>
+<circle cx="1265" cy="975" r="2" fill="#868e96"/>
+<circle cx="1295" cy="945" r="2" fill="#868e96"/>
+<circle cx="1295" cy="975" r="2" fill="#868e96"/>
+<text x="1302" y="956" font-size="11.5" text-anchor="start" font-weight="bold" fill="#1f2328">SW2</text>
+<text x="1302" y="971" font-size="10.5" text-anchor="start" font-weight="normal" fill="#495057">GPIO41</text>
+<line x1="1420" y1="930" x2="1420" y2="945" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<line x1="1420" y1="975" x2="1420" y2="990" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+<rect x="1405" y="945" width="30" height="30" rx="4" fill="#e9ecef" stroke="#495057" stroke-width="1.8"/>
+<circle cx="1420" cy="960" r="9" fill="#343a40"/>
+<circle cx="1405" cy="945" r="2" fill="#868e96"/>
+<circle cx="1405" cy="975" r="2" fill="#868e96"/>
+<circle cx="1435" cy="945" r="2" fill="#868e96"/>
+<circle cx="1435" cy="975" r="2" fill="#868e96"/>
+<text x="1442" y="956" font-size="11.5" text-anchor="start" font-weight="bold" fill="#1f2328">SW1</text>
+<text x="1442" y="971" font-size="10.5" text-anchor="start" font-weight="normal" fill="#495057">GPIO42</text>
+<text x="1350" y="1090" font-size="10.5" text-anchor="middle" font-weight="italic" fill="#495057">кнопки 12 мм</text>
+<text x="1350" y="1105" font-size="10.5" text-anchor="middle" font-weight="italic" fill="#495057">на GND, в коде</text>
+<text x="1350" y="1120" font-size="10.5" text-anchor="middle" font-weight="italic" fill="#495057">INPUT_PULLUP</text>
+<text x="1350" y="1140" font-size="9.5" text-anchor="middle" font-weight="italic" fill="#495057">(ножки по диагонали)</text>
+<rect x="30" y="1580" width="140" height="120" rx="8" fill="#f8f9fa" stroke="#495057" stroke-width="1.8"/>
+<text x="100" y="1604" font-size="12" text-anchor="middle" font-weight="bold" fill="#1f2328">Зарядное</text>
+<text x="100" y="1620" font-size="12" text-anchor="middle" font-weight="bold" fill="#1f2328">устройство</text>
+<text x="100" y="1640" font-size="11.5" text-anchor="middle" font-weight="bold" fill="#d62828">12,6 В · 1–2 А</text>
+<text x="100" y="1656" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">CC/CV для 3S</text>
+<text x="100" y="1672" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">Li-ion</text>
+<text x="100" y="1690" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">центр «+»</text>
+<line x1="170" y1="1640" x2="205" y2="1640" stroke="#495057" stroke-width="5" stroke-linecap="round"/>
+<rect x="205" y="1575" width="85" height="130" rx="8" fill="#e9ecef" stroke="#343a40" stroke-width="1.8"/>
+<text x="247" y="1640" font-size="10" text-anchor="middle" font-weight="bold" fill="#1f2328" transform="rotate(-90 247 1640)">DC 5,5×2,1</text>
+<rect x="286" y="1596" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="281" y="1604" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2328">−</text>
+<rect x="286" y="1676" width="8" height="8" rx="1.5" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<text x="281" y="1684" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2328">+</text>
+<rect x="340" y="1575" width="110" height="40" rx="7" fill="#3b5bdb" stroke="#1c2f8a" stroke-width="1.5"/>
+<rect x="450" y="1587" width="6" height="16" rx="1" fill="#adb5bd" stroke="#495057" stroke-width="1"/>
+<text x="395.0" y="1592" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#ffffff">18650 #1</text>
+<text x="395.0" y="1607" font-size="10" text-anchor="middle" font-weight="normal" fill="#dbe4ff">3,6 В</text>
+<text x="347" y="1570" font-size="12" text-anchor="middle" font-weight="bold" fill="#495057">−</text>
+<text x="453" y="1570" font-size="12" text-anchor="middle" font-weight="bold" fill="#495057">+</text>
+<rect x="470" y="1575" width="110" height="40" rx="7" fill="#3b5bdb" stroke="#1c2f8a" stroke-width="1.5"/>
+<rect x="580" y="1587" width="6" height="16" rx="1" fill="#adb5bd" stroke="#495057" stroke-width="1"/>
+<text x="525.0" y="1592" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#ffffff">18650 #2</text>
+<text x="525.0" y="1607" font-size="10" text-anchor="middle" font-weight="normal" fill="#dbe4ff">3,6 В</text>
+<text x="477" y="1570" font-size="12" text-anchor="middle" font-weight="bold" fill="#495057">−</text>
+<text x="583" y="1570" font-size="12" text-anchor="middle" font-weight="bold" fill="#495057">+</text>
+<rect x="600" y="1575" width="110" height="40" rx="7" fill="#3b5bdb" stroke="#1c2f8a" stroke-width="1.5"/>
+<rect x="710" y="1587" width="6" height="16" rx="1" fill="#adb5bd" stroke="#495057" stroke-width="1"/>
+<text x="655.0" y="1592" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#ffffff">18650 #3</text>
+<text x="655.0" y="1607" font-size="10" text-anchor="middle" font-weight="normal" fill="#dbe4ff">3,6 В</text>
+<text x="607" y="1570" font-size="12" text-anchor="middle" font-weight="bold" fill="#495057">−</text>
+<text x="713" y="1570" font-size="12" text-anchor="middle" font-weight="bold" fill="#495057">+</text>
+<rect x="320" y="1660" width="420" height="100" rx="8" fill="#edf7ed" stroke="#2b8a3e" stroke-width="1.8"/>
+<text x="530" y="1712" font-size="12" text-anchor="middle" font-weight="bold" fill="#1f2328">BMS 3S (10–20 А, с балансировкой)</text>
+<text x="530" y="1728" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">общий порт: заряд и нагрузка через P+/P−</text>
+<rect x="326" y="1656" width="8" height="8" rx="1.5" fill="#495057" stroke="#ffffff" stroke-width="1"/>
+<text x="330" y="1677" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">B−</text>
+<rect x="459" y="1656" width="8" height="8" rx="1.5" fill="#868e96" stroke="#ffffff" stroke-width="1"/>
+<text x="463" y="1677" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">B1</text>
+<rect x="589" y="1656" width="8" height="8" rx="1.5" fill="#868e96" stroke="#ffffff" stroke-width="1"/>
+<text x="593" y="1677" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">B2</text>
+<rect x="722" y="1656" width="8" height="8" rx="1.5" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<text x="726" y="1677" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">B+</text>
+<rect x="736" y="1686" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="731" y="1694" font-size="10.5" text-anchor="end" font-weight="bold" fill="#1f2328">P−</text>
+<rect x="736" y="1731" width="8" height="8" rx="1.5" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<text x="731" y="1739" font-size="10.5" text-anchor="end" font-weight="bold" fill="#1f2328">P+ (=B+)</text>
+<path d="M 726 1680 L 726 1735 L 732 1735" fill="none" stroke="#c92a2a" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="530" y="1782" font-size="11.5" text-anchor="middle" font-weight="bold" fill="#d62828">АКБ 3S1P: 11,1 В номинал · 12,6 В полный · 3000–3500 мА·ч</text>
+<circle cx="905" cy="1735" r="4" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<circle cx="975" cy="1735" r="4" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<line x1="908" y1="1733" x2="968" y2="1712" stroke="#343a40" stroke-width="2.6" stroke-linecap="round"/>
+<text x="940" y="1695" font-size="11.5" text-anchor="middle" font-weight="bold" fill="#1f2328">S1 вкл/выкл</text>
+<text x="940" y="1765" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#495057">(≥ 3 А)</text>
+<rect x="1018" y="1727" width="64" height="16" rx="2" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<line x1="1010" y1="1735" x2="1090" y2="1735" stroke="#343a40" stroke-width="1.6" stroke-linecap="round"/>
+<text x="1050" y="1716" font-size="11.5" text-anchor="middle" font-weight="bold" fill="#1f2328">F1 3 А</text>
+<text x="1050" y="1765" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">(самовосст.</text>
+<text x="1050" y="1778" font-size="10" text-anchor="middle" font-weight="normal" fill="#495057">или стекл.)</text>
+<rect x="1260" y="1600" width="300" height="120" rx="8" fill="#fff4e6" stroke="#f08c00" stroke-width="1.8"/>
+<rect x="1286" y="1596" width="8" height="8" rx="1.5" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<text x="1290" y="1617" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#1f2328">IN+</text>
+<rect x="1336" y="1596" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1340" y="1617" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#1f2328">IN−</text>
+<rect x="1476" y="1596" width="8" height="8" rx="1.5" fill="#212529" stroke="#ffffff" stroke-width="1"/>
+<text x="1480" y="1617" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#1f2328">OUT−</text>
+<rect x="1526" y="1596" width="8" height="8" rx="1.5" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="1530" y="1617" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#1f2328">OUT+</text>
+<text x="1410" y="1650" font-size="12.5" text-anchor="middle" font-weight="bold" fill="#1f2328">MP1584EN (DC-DC ↓)</text>
+<text x="1410" y="1668" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#1f2328">вход 9–12,6 В → выход 5,2 В</text>
+<text x="1410" y="1690" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#e03131">выстави 5,2 В ДО подключения!</text>
+<text x="1410" y="1706" font-size="9.5" text-anchor="middle" font-weight="normal" fill="#495057">(крути подстроечник, мерь мультиметром)</text>
+<rect x="30" y="110" width="500" height="516" rx="10" fill="#fbfbfc" stroke="#ced4da" stroke-width="1.2"/>
+<text x="50" y="138" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2328">Обозначения</text>
+<line x1="50" y1="166" x2="100" y2="166" stroke="#d62828" stroke-width="3.4" stroke-linecap="round"/>
+<text x="114" y="170" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">VBAT +9…12,6 В (АКБ / зарядка)</text>
+<line x1="50" y1="189" x2="100" y2="189" stroke="#f08c00" stroke-width="3.4" stroke-linecap="round"/>
+<text x="114" y="193" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">+5 В от MP1584 (+ D1 на ESP32)</text>
+<line x1="50" y1="212" x2="100" y2="212" stroke="#e64980" stroke-width="3.4" stroke-linecap="round"/>
+<text x="114" y="216" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">+3,3 В с пина 3V3 ESP32 (только микрофоны)</text>
+<line x1="50" y1="235" x2="100" y2="235" stroke="#212529" stroke-width="3.4" stroke-linecap="round"/>
+<text x="114" y="239" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">GND (общий минус)</text>
+<line x1="50" y1="258" x2="100" y2="258" stroke="#2f9e44" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="262" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">I2S0 — микрофоны INMP441</text>
+<line x1="50" y1="281" x2="100" y2="281" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="285" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">I2S1 — ЦАП PCM5102A</text>
+<line x1="50" y1="304" x2="100" y2="304" stroke="#1c7ed6" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="308" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">SPI — дисплей и тачскрин (общая шина)</text>
+<line x1="50" y1="327" x2="100" y2="327" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="331" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">аналоговый звук ЦАП → усилитель</text>
+<line x1="50" y1="350" x2="100" y2="350" stroke="#8d5524" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="354" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">выход усилителя → динамик</text>
+<line x1="50" y1="373" x2="100" y2="373" stroke="#c99700" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="377" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">данные WS2812B (через 74AHCT125)</text>
+<line x1="50" y1="396" x2="100" y2="396" stroke="#5c677d" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="400" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">кнопки</text>
+<line x1="50" y1="419" x2="100" y2="419" stroke="#5c940d" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="423" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">измерение напряжения АКБ (АЦП)</text>
+<line x1="50" y1="442" x2="100" y2="442" stroke="#868e96" stroke-width="2.4" stroke-linecap="round"/>
+<text x="114" y="446" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">балансировочные провода BMS</text>
+<line x1="50" y1="471" x2="100" y2="471" stroke="#495057" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="75" y1="455" x2="75" y2="487" stroke="#495057" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="75" cy="471" r="4.5" fill="#495057"/>
+<text x="114" y="475" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">точка — провода соединены (пайка / общий узел)</text>
+<line x1="50" y1="507" x2="100" y2="507" stroke="#495057" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 75 489 L 75 501 A 6 6 0 0 1 75 513 L 75 525" fill="none" stroke="#495057" stroke-width="2.4"/>
+<text x="114" y="511" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">дуга — провода пересекаются, НО НЕ соединены</text>
+<line x1="62" y1="539" x2="80" y2="539" stroke="#adb5bd" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="84" y1="535" x2="92" y2="543" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<line x1="84" y1="543" x2="92" y2="535" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<text x="114" y="543" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">вывод не подключать</text>
+<text x="50" y="573" font-size="11" text-anchor="start" font-weight="normal" fill="#495057">Шины питания здесь логические. Физически GND веди «звездой»</text>
+<text x="50" y="589" font-size="11" text-anchor="start" font-weight="normal" fill="#495057">от P− BMS; усилитель и MP1584 — проводом ≥ 0,5 мм².</text>
+<rect x="1560" y="940" width="730" height="500" rx="10" fill="#fbfbfc" stroke="#ced4da" stroke-width="1.2"/>
+<text x="1580" y="966" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2328">Распиновка ESP32-S3</text>
+<rect x="1580" y="984.0" width="10" height="10" rx="2" fill="#2f9e44" stroke="#2f9e44" stroke-width="1"/>
+<text x="1598" y="994.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO4</text>
+<text x="1660" y="994.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">MIC SCK (I2S0 BCLK)</text>
+<rect x="1580" y="1006.5" width="10" height="10" rx="2" fill="#2f9e44" stroke="#2f9e44" stroke-width="1"/>
+<text x="1598" y="1016.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO5</text>
+<text x="1660" y="1016.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">MIC WS (I2S0 LRCLK)</text>
+<rect x="1580" y="1029.0" width="10" height="10" rx="2" fill="#2f9e44" stroke="#2f9e44" stroke-width="1"/>
+<text x="1598" y="1039.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO6</text>
+<text x="1660" y="1039.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">MIC SD (I2S0 DATA IN)</text>
+<rect x="1580" y="1051.5" width="10" height="10" rx="2" fill="#7048e8" stroke="#7048e8" stroke-width="1"/>
+<text x="1598" y="1061.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO7</text>
+<text x="1660" y="1061.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">DAC BCK (I2S1 BCLK)</text>
+<rect x="1580" y="1074.0" width="10" height="10" rx="2" fill="#7048e8" stroke="#7048e8" stroke-width="1"/>
+<text x="1598" y="1084.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO15</text>
+<text x="1660" y="1084.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">DAC LCK (I2S1 WS)</text>
+<rect x="1580" y="1096.5" width="10" height="10" rx="2" fill="#7048e8" stroke="#7048e8" stroke-width="1"/>
+<text x="1598" y="1106.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO16</text>
+<text x="1660" y="1106.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">DAC DIN (I2S1 DATA OUT)</text>
+<rect x="1580" y="1119.0" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1129.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO10</text>
+<text x="1660" y="1129.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">SPI SCK → SCK + T_CLK</text>
+<rect x="1580" y="1141.5" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1151.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO8</text>
+<text x="1660" y="1151.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">SPI MOSI → SDI + T_DIN</text>
+<rect x="1580" y="1164.0" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1174.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO18</text>
+<text x="1660" y="1174.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">SPI MISO ← T_DO</text>
+<rect x="1580" y="1186.5" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1196.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO14</text>
+<text x="1660" y="1196.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">TFT CS</text>
+<rect x="1580" y="1209.0" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1219.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO12</text>
+<text x="1660" y="1219.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">TFT DC</text>
+<rect x="1580" y="1231.5" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1241.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO13</text>
+<text x="1660" y="1241.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">TFT RESET</text>
+<rect x="1580" y="1254.0" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1264.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO11</text>
+<text x="1660" y="1264.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">TFT LED (подсветка, PWM)</text>
+<rect x="1580" y="1276.5" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1286.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO9</text>
+<text x="1660" y="1286.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">TOUCH CS (XPT2046)</text>
+<rect x="1580" y="1299.0" width="10" height="10" rx="2" fill="#1c7ed6" stroke="#1c7ed6" stroke-width="1"/>
+<text x="1598" y="1309.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO17</text>
+<text x="1660" y="1309.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">TOUCH IRQ</text>
+<rect x="1580" y="1321.5" width="10" height="10" rx="2" fill="#c99700" stroke="#c99700" stroke-width="1"/>
+<text x="1598" y="1331.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO2</text>
+<text x="1660" y="1331.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">WS2812B DATA (RMT)</text>
+<rect x="1580" y="1344.0" width="10" height="10" rx="2" fill="#5c677d" stroke="#5c677d" stroke-width="1"/>
+<text x="1598" y="1354.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO42</text>
+<text x="1660" y="1354.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">кнопка SW1</text>
+<rect x="1580" y="1366.5" width="10" height="10" rx="2" fill="#5c677d" stroke="#5c677d" stroke-width="1"/>
+<text x="1598" y="1376.5" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO41</text>
+<text x="1660" y="1376.5" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">кнопка SW2</text>
+<rect x="1580" y="1389.0" width="10" height="10" rx="2" fill="#5c940d" stroke="#5c940d" stroke-width="1"/>
+<text x="1598" y="1399.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2328">GPIO1</text>
+<text x="1660" y="1399.0" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">АКБ: АЦП (ADC1_CH0)</text>
+<text x="1580" y="1430" font-size="10.5" text-anchor="start" font-weight="italic" fill="#495057">Свободны: GPIO21, 47, 40, 39 (38 — RGB-LED на v1.1)</text>
+<text x="1920" y="966" font-size="15" text-anchor="start" font-weight="bold" fill="#e03131">Важно</text>
+<text x="1920" y="992" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• GPIO35–37 заняты PSRAM (N16R8),</text>
+<text x="1920" y="1014" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  GPIO19/20 — USB, 0/3/45/46 — strap.</text>
+<text x="1920" y="1036" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• SDO (MISO) дисплея не подключаем:</text>
+<text x="1920" y="1058" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  он мешает тачу на общей шине.</text>
+<text x="1920" y="1080" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• PCM5102A: SCK на GND, иначе нет</text>
+<text x="1920" y="1102" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  звука; XSMT = H (перемычка 3-H).</text>
+<text x="1920" y="1124" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• Mic A — левый канал, Mic B —</text>
+<text x="1920" y="1146" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  правый; SD общий. Микрофоны</text>
+<text x="1920" y="1168" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  подальше от динамика.</text>
+<text x="1920" y="1190" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• WS2812B: ограничь яркость ≈ 1 А</text>
+<text x="1920" y="1212" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  (FastLED setMaxPowerInMilliWatts).</text>
+<text x="1920" y="1234" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• D1: можно шить по USB при</text>
+<text x="1920" y="1256" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  включённом S1 — питание не</text>
+<text x="1920" y="1278" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  «встретится». Перемычку IN-OUT</text>
+<text x="1920" y="1300" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  на плате ESP32 не запаивать.</text>
+<text x="1920" y="1322" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• 3,3 В с ESP32 — только на</text>
+<text x="1920" y="1344" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  микрофоны (LDO платы слабый).</text>
+<text x="1920" y="1366" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">• Сначала MP1584 → 5,2 В,</text>
+<text x="1920" y="1388" font-size="11.5" text-anchor="start" font-weight="normal" fill="#1f2328">  потом всё остальное.</text>
+<rect x="1600" y="1560" width="780" height="300" rx="10" fill="#fff8f8" stroke="#ffc9c9" stroke-width="1.2"/>
+<text x="1620" y="1588" font-size="15" text-anchor="start" font-weight="bold" fill="#d62828">Аккумулятор и питание</text>
+<text x="1620" y="1616" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">АКБ:</text>
+<text x="1712" y="1616" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">3S1P Li-ion 18650 — 11,1 В (12,6 В полный, ~9 В пустой)</text>
+<text x="1620" y="1639" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">Ёмкость:</text>
+<text x="1712" y="1639" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">3000–3500 мА·ч на ячейку (≈33–39 Вт·ч) → ~7–10 ч работы</text>
+<text x="1620" y="1662" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">Ячейки:</text>
+<text x="1712" y="1662" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">с током ≥ 8–10 А: Samsung 35E / 30Q, LG MJ1, Molicel P28A</text>
+<text x="1620" y="1685" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">BMS:</text>
+<text x="1712" y="1685" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">3S 10–20 А с балансировкой, общий порт (P+ = B+)</text>
+<text x="1620" y="1708" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">Зарядка:</text>
+<text x="1712" y="1708" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">ЗУ 12,6 В 1–2 А CC/CV в то же гнездо 5,5×2,1</text>
+<text x="1620" y="1731" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328"></text>
+<text x="1712" y="1731" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">блок 12 В 2 А для зарядки 3S не годится (нет CC/CV, мало напряжения)</text>
+<text x="1620" y="1754" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">S1:</text>
+<text x="1712" y="1754" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">отключает только нагрузку — заряд идёт и в выключенной колонке</text>
+<text x="1620" y="1777" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">АЦП:</text>
+<text x="1712" y="1777" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">Vакб = Vgpio1 × 5,55 (100k/22k); предупреждать при &lt; 9,9 В,</text>
+<text x="1620" y="1800" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328"></text>
+<text x="1712" y="1800" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">выключаться при &lt; 9,6 В; BMS отрежет сама на ~7,5–8,4 В</text>
+<text x="1620" y="1823" font-size="12.5" text-anchor="start" font-weight="bold" fill="#1f2328">Ток:</text>
+<text x="1712" y="1823" font-size="12.5" text-anchor="start" font-weight="normal" fill="#1f2328">пик ≈ 2,5 А от АКБ (усилитель + 5 В ветка), средний ≈ 0,3–0,5 А</text>
+<circle cx="825" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="440" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1542" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="580" cy="876" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1650" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="810" cy="194" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1340" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1623" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="994" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1515" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1800" cy="560" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1800" cy="194" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1480" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1596" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1800" cy="520" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="780" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1515" cy="1470" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="910" cy="194" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1677" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1569" cy="830" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1440" cy="420" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1440" cy="194" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="780" cy="1545" r="4.6" fill="#212529" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1300" cy="420" r="4.6" fill="#5c940d" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1300" cy="480" r="4.6" fill="#5c940d" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="805" cy="1492" r="4.6" fill="#f08c00" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1560" cy="560" r="4.6" fill="#f08c00" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1530" cy="1492" r="4.6" fill="#f08c00" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1870" cy="520" r="4.6" fill="#f08c00" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1870" cy="172" r="4.6" fill="#f08c00" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="968" cy="1492" r="4.6" fill="#f08c00" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="836" cy="1054" r="4.6" fill="#1c7ed6" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="810" cy="460" r="4.6" fill="#2f9e44" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="463" cy="1595" r="4.6" fill="#868e96" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="860" cy="260" r="4.6" fill="#e64980" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="640" cy="260" r="4.6" fill="#e64980" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1290" cy="1514" r="4.6" fill="#d62828" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1150" cy="1514" r="4.6" fill="#d62828" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="860" cy="1735" r="4.6" fill="#d62828" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="872" cy="1118" r="4.6" fill="#1c7ed6" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="593" cy="1595" r="4.6" fill="#868e96" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="910" cy="500" r="4.6" fill="#2f9e44" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="860" cy="480" r="4.6" fill="#2f9e44" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="702.9" y="244.5" width="94.2" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="750" y="254" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#e64980">+3,3 В с ESP32</text>
+<rect x="498.9" y="732.5" width="12.3" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="505" y="742" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#0c8599">L</text>
+<rect x="473.6" y="764.5" width="62.7" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="505" y="774" font-size="10.5" text-anchor="middle" font-weight="bold" fill="#212529">GND сигн.</text>
+<rect x="1305.0" y="594.5" width="75.3" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="1308" y="604" font-size="10.5" text-anchor="start" font-weight="bold" fill="#5c940d">АЦП → GPIO1</text>
+<rect x="1737.0" y="1455.5" width="24.9" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="1740" y="1465" font-size="10.5" text-anchor="start" font-weight="bold" fill="#212529">GND</text>
+<rect x="1737.0" y="1477.5" width="87.9" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="1740" y="1487" font-size="10.5" text-anchor="start" font-weight="bold" fill="#f08c00">+5 В (MP1584)</text>
+<rect x="1737.0" y="1499.5" width="195.0" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="1740" y="1509" font-size="10.5" text-anchor="start" font-weight="bold" fill="#d62828">VBAT +9…12,6 В (после S1 и F1)</text>
+<rect x="2137.0" y="135.5" width="31.2" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="2140" y="145" font-size="10.5" text-anchor="start" font-weight="bold" fill="#d62828">VBAT</text>
+<rect x="2137.0" y="157.5" width="31.2" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="2140" y="167" font-size="10.5" text-anchor="start" font-weight="bold" fill="#f08c00">+5 В</text>
+<rect x="2137.0" y="179.5" width="24.9" height="13.5" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="2140" y="189" font-size="10.5" text-anchor="start" font-weight="bold" fill="#212529">GND</text>
+<text x="2380" y="1878" font-size="10" text-anchor="end" fill="#adb5bd">v1 · схема соединений</text>
+</svg>

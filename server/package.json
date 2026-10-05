@@ -1,0 +1,30 @@
+{
+  "name": "ai-column-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Сервер умной колонки AI-Column: речь → агенты (Claude, Qwen, Kimi и др.) → речь",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js",
+    "check-config": "node tools/check-config.js",
+    "simulate": "node tools/simulate-device.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "bonjour-service": "^1.4.4",
+    "express": "^5.2.1",
+    "openai": "^7.27.0",
+    "ws": "^8.22.0",
+    "yaml": "^2.9.1"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^13.0.3"
+  }
+}

@@ -1,0 +1,61 @@
+# AI-Column: сервер + (по желанию) локальные модели и речь.
+#
+#   docker compose up -d --build                         — только сервер (агенты/речь где-то ещё)
+#   docker compose --profile speech up -d --build        — + распознавание (faster-whisper) и синтез (Piper)
+#   docker compose --profile speech --profile local-llm up -d --build   — + Ollama для Qwen
+#
+# После запуска Ollama: docker compose exec ollama ollama pull qwen3:8b
+# Модель распознавания (один раз): curl -X POST http://localhost:8000/v1/models/Systran/faster-whisper-medium
+#
+# GPU (NVIDIA): раскомментируй блоки deploy у ollama и stt и поставь образ speaches с -cuda.
+
+services:
+  server:
+    build: ./server
+    # host-сеть нужна, чтобы колонка нашла сервер через mDNS (работает на Linux).
+    # На Docker Desktop (Windows/macOS) замени на ports: ["8080:8080"] и пропиши SERVER_HOST в прошивке.
+    network_mode: host
+    env_file: ./server/.env
+    environment:
+      OLLAMA_URL: ${OLLAMA_URL:-http://localhost:11434/v1}
+      STT_URL: ${STT_URL:-http://localhost:8000/v1}
+      TTS_URL: ${TTS_URL:-http://localhost:5000}
+    volumes:
+      - ./server/config:/app/config
+      - ./server/data:/app/data
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: [local-llm]
+    ports: ["11434:11434"]
+    volumes: [ollama:/root/.ollama]
+    restart: unless-stopped
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+
+  stt:
+    image: ghcr.io/speaches-ai/speaches:latest-cpu   # с NVIDIA: latest-cuda
+    profiles: [speech]
+    ports: ["8000:8000"]
+    volumes: [hf-cache:/home/ubuntu/.cache/huggingface/hub]
+    restart: unless-stopped
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+
+  tts:
+    build:
+      context: ./server/docker/piper
+      args:
+        VOICE: ru_RU-irina-medium   # ещё есть ru_RU-denis-medium, ru_RU-dmitri-medium, ru_RU-ruslan-medium
+    profiles: [speech]
+    ports: ["5000:5000"]
+    restart: unless-stopped
+
+volumes:
+  ollama: {}
+  hf-cache: {}

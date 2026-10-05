@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Column — панель</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo"></span><div><h1>AI-Column</h1><p id="health">подключаюсь…</p></div></div>
+  <form id="tokenForm" class="token">
+    <input id="token" type="password" placeholder="AUTH_TOKEN" autocomplete="off">
+    <button type="submit">Сохранить</button>
+  </form>
+</header>
+
+<main>
+  <section>
+    <div class="head"><h2>Агенты</h2><button id="checkAgents" class="ghost">Проверить</button></div>
+    <div id="agents" class="cards"></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Колонки</h2></div>
+    <div id="devices" class="cards"></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Спросить текстом</h2></div>
+    <form id="askForm" class="ask">
+      <select id="askAgent"><option value="">Авто (как колонка)</option></select>
+      <input id="askText" placeholder="Например: Клод, объясни, как работает I2S" required>
+      <button type="submit">Спросить</button>
+    </form>
+    <div id="askResult" class="answer" hidden></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>История</h2>
+      <select id="histDevice"><option value="">все</option></select>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Когда</th><th>Колонка</th><th>Агент</th><th>Вопрос</th><th>Ответ</th><th>1-й звук</th></tr></thead>
+      <tbody id="history"></tbody>
+    </table></div>
+  </section>
+</main>
+
+<template id="deviceTpl">
+  <article class="card device">
+    <div class="row"><strong class="name"></strong><span class="badge state"></span></div>
+    <div class="meta"></div>
+    <label>Агент <select class="agent"></select></label>
+    <label>Громкость <input class="volume" type="range" min="0" max="100" step="5"><span class="volval"></span></label>
+    <form class="say"><input placeholder="Сказать вслух…"><button>▶</button></form>
+  </article>
+</template>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
