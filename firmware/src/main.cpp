@@ -158,7 +158,41 @@ void setVolume(int v, bool notifyServer) {
 
 // ─────────────────────────────────────────────────────────────── слушаем
 
+#if !MIC_ENABLED
+// MVP без микрофона: вместо записи уходит тестовая фраза. Принимаем только в Idle,
+// чтобы не наслаивать ходы: поведение сервера на второй `text` посреди хода не проверено.
+void sendTestPhrase() {
+  if (!net::serverConnected()) {
+    ui::toast("Нет связи с сервером", kColorWarn);
+    leds::flashAlert(kColorWarn, 600);
+    return;
+  }
+  if (state != State::Idle) {
+    ui::toast("Подожди — идёт ответ", kColorWarn, 1000);
+    return;
+  }
+  JsonDocument d;
+  d["type"] = "text";
+  d["text"] = TEST_PHRASE;
+  if (selectedAgent != "auto") d["agent"] = selectedAgent;
+  if (!net::sendJson(d)) {
+    ui::toast("Не удалось отправить", kColorError);
+    return;
+  }
+  thinkingSince = millis();
+  ui::clearConversation();
+  ui::setUserText(TEST_PHRASE);
+  ui::setAnswering("", colorOf(selectedAgent));
+  setState(State::Thinking);
+}
+#endif
+
 void startListening(bool holdKnown) {
+#if !MIC_ENABLED
+  (void)holdKnown;
+  sendTestPhrase();
+  return;
+#endif
   if (!net::serverConnected()) {
     ui::toast("Нет связи с сервером", kColorWarn);
     leds::flashAlert(kColorWarn, 600);
@@ -257,7 +291,11 @@ void onServerMessage(JsonDocument& doc) {
       if (doc["volume"].is<int>()) setVolume(doc["volume"].as<int>(), false);
       maxUtteranceMs = (doc["max_utterance_seconds"] | (MAX_UTTERANCE_MS / 1000)) * 1000;
       String name = doc["assistant"] | "AI-Column";
+#if MIC_ENABLED
       setState(State::Idle, "Я " + name + ". SW1 — говорить, SW2 — сменить агента");
+#else
+      setState(State::Idle, "Я " + name + ". SW1 — тестовый вопрос, SW2 — сменить агента");
+#endif
     }
   } else if (!strcmp(type, "agent_selected")) {
     selectAgent(doc["agent"] | "auto", false);
