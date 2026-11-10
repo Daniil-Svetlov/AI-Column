@@ -490,7 +490,7 @@ void loop() {
       tickListening();
       break;
     case State::Thinking:
-      if (now - thinkingSince > 60000) {
+      if (millis() - thinkingSince > 60000) {
         ui::toast("Сервер не ответил", kColorError);
         sendType("cancel");
         setState(State::Idle);
