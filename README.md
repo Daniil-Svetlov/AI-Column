@@ -3,7 +3,7 @@
 Самодельная голосовая колонка на **ESP32-S3**. Нажимаешь кнопку (или касаешься экрана) и говоришь. Колонка передаёт звук на твой сервер, там речь распознаётся, вопрос уходит подходящему агенту — **Claude**, локальному **Qwen**, **Kimi** или любой другой модели. Ответ озвучивается и стримится обратно по предложениям: колонка начинает говорить, пока модель ещё пишет.
 
 ```
- ┌──────────── колонка (ESP32-S3) ────────────┐         ┌──────────────── сервер (Node.js) ────────────────┐
+ ┌──────────── колонка (ESP32-S3) ────────────┐         ┌──────────────── сервер (Rust) ───────────────────┐
  │ 2× INMP441 ─I2S─┐                          │  Wi-Fi  │  речь → текст (Whisper)                          │
  │                 ├─ ESP32-S3 ── WebSocket ──┼────────►│     → роутер: «Клод, …» / выбор / правила / ИИ   │
  │ PCM5102A ◄─I2S──┘   │  │                   │◄────────┼─  → агент: Claude │ Qwen │ Kimi │ … (+fallback) │
@@ -42,23 +42,21 @@
 ## Структура репозитория
 
 ```text
-├── firmware/                 прошивка ESP32-S3 (PlatformIO, Arduino)
-│   ├── platformio.ini
-│   ├── include/              config.h (пины), secrets.example.h, *.h
-│   ├── src/                  main.cpp, audio.cpp, display.cpp, api.cpp, leds.cpp, battery.cpp
-│   └── test/                 тесты логики на ПК (pio test -e native)
-├── server/                   сервер (Node.js 20+)
-│   ├── server.js             точка входа
+├── firmware/                 прошивка ESP32-S3 (Rust, ESP-IDF)
+│   ├── core/                 логика без железа: состояния, звук, VAD, интерфейс, подсветка (cargo test на ПК)
+│   └── esp/                  драйверы платы и main.rs; bin/hwtest.rs — проверка железа
+├── server/                   сервер (Rust, tokio + axum)
+│   ├── Cargo.toml
 │   ├── config/               config.example.yaml — агенты, роутер, речь, инструменты
 │   ├── src/
-│   │   ├── agents/           anthropic.js, openai.js, router.js, tools.js, registry.js
-│   │   ├── speech/           stt.js, tts.js, streamer.js
-│   │   ├── assistant.js      конвейер «речь → агент → речь»
-│   │   ├── hub.js            WebSocket-протокол колонки
-│   │   └── http.js           REST API и веб-панель
+│   │   ├── main.rs           точка входа; подкоманды check-config и simulate (src/cli/)
+│   │   ├── agents/           anthropic.rs, openai.rs, router.rs, tools.rs, mod.rs (реестр)
+│   │   ├── speech/           stt.rs, tts.rs, streamer.rs
+│   │   ├── assistant.rs      конвейер «речь → агент → речь»
+│   │   ├── hub.rs            WebSocket-протокол колонки
+│   │   └── http.rs           REST API и веб-панель
 │   ├── public/               веб-панель
-│   ├── test/                 50 тестов (node --test)
-│   └── tools/                simulate-device.js, check-config.js
+│   └── tests/                интеграционные тесты (cargo test)
 ├── hardware/                 schematic.svg (все провода), BOM.csv, генератор схемы
 ├── docs/                     ARCHITECTURE, API, AGENTS, HARDWARE, SETUP, ROADMAP
 └── docker-compose.yml        сервер + Ollama + распознавание и синтез речи
@@ -72,11 +70,10 @@
 
 ```bash
 cd server
-npm install
 cp .env.example .env                       # AUTH_TOKEN, ANTHROPIC_API_KEY…
 cp config/config.example.yaml config/config.yaml
-npm run check-config                       # кто из агентов доступен
-npm start                                  # http://localhost:8080
+cargo run --release -- check-config        # кто из агентов доступен
+cargo run --release --                     # http://localhost:8080
 ```
 
 **Речь и локальные модели** — проще всего через Docker:
@@ -90,15 +87,16 @@ curl -X POST http://localhost:8000/v1/models/Systran/faster-whisper-medium
 **Проверка без железа:**
 
 ```bash
-npm run simulate -- --text "Квен, который час?"
+cargo run --release -- simulate --text "Квен, который час?"
 ```
 
 **2. Прошивка:**
 
 ```bash
-cd firmware
-cp include/secrets.example.h include/secrets.h   # Wi-Fi и AUTH_TOKEN
-pio run -t upload && pio device monitor
+cd firmware/esp
+cp cfg.example.toml cfg.toml                      # Wi-Fi и AUTH_TOKEN
+cargo run --release --bin hwtest                  # сначала проверить железо (по желанию)
+cargo run --release                               # прошить и открыть лог
 ```
 
 При первом включении колонка предложит откалибровать тачскрин, затем сама найдёт сервер в сети через mDNS.

@@ -1,0 +1,9 @@
+# Скопируй в cfg.toml (он не попадает в git) и заполни.
+[ai-column-fw]
+wifi_ssid = "MyWiFi"
+wifi_password = "password"
+# Адрес сервера AI-Column. Пусто — найти сервер в сети автоматически (mDNS _aicolumn._tcp).
+server_host = ""
+server_port = 8080
+# Тот же AUTH_TOKEN, что в server/.env
+device_token = ""

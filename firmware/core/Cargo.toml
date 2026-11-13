@@ -1,0 +1,10 @@
+[package]
+name = "column-core"
+version = "0.2.0"
+edition = "2021"
+description = "Логика прошивки AI-Column без железа: звук, детектор речи, протокол, интерфейс, подсветка. Тестируется на ПК."
+license = "MIT"
+
+[dependencies]
+embedded-graphics = "0.8"
+serde_json = "1"

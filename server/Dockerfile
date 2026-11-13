@@ -1,11 +1,16 @@
-# Сервер AI-Column
-FROM node:22-bookworm-slim
+# Сервер AI-Column (Rust)
+FROM rust:1-bookworm AS build
+WORKDIR /src
+COPY Cargo.toml Cargo.lock ./
+COPY src ./src
+RUN cargo build --release --locked
+
+FROM debian:bookworm-slim
 # ffmpeg нужен, только если TTS отдаёт не WAV (mp3/ogg)
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg ca-certificates && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
-COPY . .
-ENV NODE_ENV=production
+COPY --from=build /src/target/release/ai-column-server /usr/local/bin/ai-column-server
+COPY config ./config
+COPY public ./public
 EXPOSE 8080
-CMD ["node", "server.js"]
+CMD ["ai-column-server"]

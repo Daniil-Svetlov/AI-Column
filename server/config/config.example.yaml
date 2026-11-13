@@ -3,7 +3,7 @@
 #  1) cp config/config.example.yaml config/config.yaml
 #  2) секреты (ключи API, токен) — в server/.env, сюда подставляются как ${ИМЯ}
 #     или ${ИМЯ:-значение_по_умолчанию}
-#  3) проверка без запуска: npm run check-config
+#  3) проверка без запуска: cargo run --release -- check-config
 # ─────────────────────────────────────────────────────────────────────────────
 
 server:
@@ -87,7 +87,7 @@ agents:
     name: Claude
     color: "#D97757"
     provider: anthropic
-    model: claude-sonnet-5-5       # самый быстрый — claude-haiku-4-5-20251001
+    model: claude-sonnet-5-5       # самый быстрый — claude-haiku-5-5
     api_key: ${ANTHROPIC_API_KEY:-}
     aliases: [клод, клода, клоду, клауд, claude]
     description: сложные вопросы, рассуждения, код, длинные объяснения

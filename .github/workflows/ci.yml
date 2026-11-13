@@ -12,33 +12,51 @@ jobs:
         working-directory: server
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
         with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: server/package-lock.json
-      - run: npm ci
-      - run: npm test
-      - run: node tools/check-config.js || true   # без живых агентов — только проверка синтаксиса конфига
+          workspaces: server
+      - run: cargo test --locked
+      - run: cargo run --locked -- check-config || true   # без живых агентов — только проверка конфига
 
-  firmware:
+  firmware-core:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: firmware
+        working-directory: firmware/core
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
         with:
-          python-version: "3.11"
+          workspaces: firmware/core
+      - run: cargo test
+
+  firmware-esp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: firmware/esp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: esp-rs/xtensa-toolchain@v1.6
+        with:
+          default: true
+          buildtargets: esp32s3
+          ldproxy: true
       - uses: actions/cache@v4
         with:
-          path: ~/.platformio
-          key: pio-${{ hashFiles('firmware/platformio.ini') }}
-      - run: pip install platformio
-      - run: pio test -e native
-      - run: pio run -e esp32s3
+          path: |
+            firmware/esp/.embuild
+            firmware/esp/target
+          key: esp-${{ hashFiles('firmware/esp/Cargo.lock', 'firmware/esp/sdkconfig.defaults') }}
+      - run: cp cfg.example.toml cfg.toml
+      - run: cargo build --release
+      - run: cargo install espflash --locked
+      - run: |
+          espflash save-image --chip esp32s3 --flash-size 16mb --partition-table partitions.csv target/xtensa-esp32s3-espidf/release/ai-column-fw ai-column-fw.bin
+          espflash save-image --chip esp32s3 --flash-size 16mb --partition-table partitions.csv target/xtensa-esp32s3-espidf/release/hwtest hwtest.bin
       - uses: actions/upload-artifact@v4
         with:
           name: firmware
-          path: firmware/.pio/build/esp32s3/*.bin
+          path: firmware/esp/*.bin

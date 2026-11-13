@@ -39,7 +39,7 @@
 - id: claude
   name: Claude
   provider: anthropic
-  model: claude-sonnet-5-5         # быстрее всех — claude-haiku-4-5-20251001
+  model: claude-sonnet-5-5         # быстрее всех — claude-haiku-5-5
   api_key: ${ANTHROPIC_API_KEY}
   aliases: [клод, клода, клоду, клауд, claude]
   description: сложные вопросы, рассуждения, код
@@ -146,8 +146,8 @@ extra_body:
 ## Проверка
 
 ```bash
-npm run check-config                                  # доступность каждого агента
-npm run simulate -- --text "Кими, придумай загадку"   # полный ход без колонки
+cargo run --release -- check-config                                  # доступность каждого агента
+cargo run --release -- simulate --text "Кими, придумай загадку"   # полный ход без колонки
 curl -H "Authorization: Bearer $AUTH_TOKEN" -H "Content-Type: application/json" \
      -d '{"text":"Квен, привет"}' http://localhost:8080/api/ask
 ```

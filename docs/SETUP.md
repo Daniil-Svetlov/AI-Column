@@ -4,26 +4,25 @@
 
 ## 1. Сервер
 
-**Требования:** Node.js 20.12+ (лучше 22 LTS) и git.
+**Требования:** Rust 1.85+ (ставится через [rustup.rs](https://rustup.rs)) и git. Первая сборка занимает пару минут.
 
 ```bash
 git clone https://github.com/Daniil-Svetlov/AI-Column.git
 cd AI-Column/server
-npm install
 cp .env.example .env
 cp config/config.example.yaml config/config.yaml
 ```
 
 **В `.env`:**
 
-- `AUTH_TOKEN` — придумай длинную строку. Сгенерировать: `node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"`.
+- `AUTH_TOKEN` — придумай длинную строку. Сгенерировать: `openssl rand -hex 16`.
 - `ANTHROPIC_API_KEY` — если нужен Claude.
 
 **В `config/config.yaml`** оставь нужных агентов и поправь адреса (подробно — в [AGENTS.md](AGENTS.md)). Тестовый агент `echo` можно включить (`enabled: true`), чтобы проверить колонку без нейросетей.
 
 ```bash
-npm run check-config        # проверка конфига и доступности агентов
-npm start                   # сервер на :8080, веб-панель — http://localhost:8080
+cargo run --release -- check-config   # проверка конфига и доступности агентов
+cargo run --release --                # сервер на :8080, веб-панель — http://localhost:8080
 ```
 
 ### Речь: распознавание (STT) и синтез (TTS)
@@ -66,7 +65,7 @@ stt: { provider: whispercpp, base_url: http://localhost:8000 }
 **Проверка речи:**
 
 ```bash
-npm run check-config -- --say
+cargo run --release -- check-config --say
 ```
 
 Команда синтезирует фразу и распознаёт её обратно.
@@ -81,8 +80,8 @@ docker compose exec ollama ollama pull qwen3:8b
 ### Проверка без колонки
 
 ```bash
-npm run simulate -- --text "Квен, который час?"
-npm run simulate -- --wav вопрос.wav --out ответ.wav     # как будто сказали в микрофон
+cargo run --release -- simulate --text "Квен, который час?"
+cargo run --release -- simulate --wav вопрос.wav --out ответ.wav     # как будто сказали в микрофон
 ```
 
 Симулятор печатает всё, что приходит колонке, и сохраняет звук ответа в WAV.
@@ -97,7 +96,8 @@ After=network-online.target
 
 [Service]
 WorkingDirectory=/home/user/AI-Column/server
-ExecStart=/usr/bin/node server.js
+# сначала: cargo build --release
+ExecStart=/home/user/AI-Column/server/target/release/ai-column-server
 Restart=always
 User=user
 
@@ -111,33 +111,43 @@ sudo systemctl enable --now ai-column
 
 ## 2. Прошивка
 
-**Требования:** VS Code с расширением PlatformIO или `pip install platformio`.
+**Требования:** тулчейн Rust для ESP32 — один раз:
 
 ```bash
-cd firmware
-cp include/secrets.example.h include/secrets.h
+cargo install espup espflash ldproxy
+espup install                 # компилятор для Xtensa (~2 ГБ)
+. ~/export-esp.sh             # в каждом новом терминале перед сборкой
 ```
 
-**В `include/secrets.h`:**
+Первая сборка сама скачает ESP-IDF (около 15 минут), дальше — секунды.
 
-- `WIFI_SSID`, `WIFI_PASSWORD` — твоя сеть;
-- `DEVICE_TOKEN` — тот же `AUTH_TOKEN`, что в `.env` сервера;
-- `SERVER_HOST` — оставь пустым: колонка найдёт сервер по mDNS. Если не находит (бывает в гостевых и некоторых mesh-сетях), впиши IP сервера.
+```bash
+cd firmware/esp
+cp cfg.example.toml cfg.toml
+```
+
+**В `cfg.toml`:**
+
+- `wifi_ssid`, `wifi_password` — твоя сеть;
+- `device_token` — тот же `AUTH_TOKEN`, что в `.env` сервера;
+- `server_host` — оставь пустым: колонка найдёт сервер по mDNS. Если не находит (бывает в гостевых и некоторых mesh-сетях), впиши IP сервера.
 
 Подключи плату к порту **«UART» / «COM»** (не «USB») и выполни:
 
 ```bash
-pio run -t upload
-pio device monitor
+cargo run --release --bin hwtest   # проверка железа: кнопки, микрофоны, экран, тач
+cargo run --release                # прошивка колонки + лог
 ```
+
+`hwtest` показывает на экране состояние SW1/SW2, уровни Mic A и Mic B (столбики в дБ; «нет сигнала» — микрофон молчит), цветные полосы с подписями (если «красный» не красный — поменяй `ColorOrder` в `esp/src/display.rs`) и точку касания с сырыми значениями тача. То же каждую секунду пишется в лог.
 
 **Первый запуск:**
 
-1. Экран предложит коснуться для калибровки тачскрина. Нажми на четыре стрелки в углах. SW1 — пропустить.
+1. Экран предложит коснуться для калибровки тачскрина. Коснись по очереди трёх крестиков. SW1 — пропустить.
 2. Колонка подключится к Wi-Fi и найдёт сервер; внизу появятся агенты.
 3. Нажми SW1 и задай вопрос.
 
-**Подстройка в `include/config.h`:**
+**Подстройка в `firmware/core/src/config.rs`:**
 
 - `MIC_SHIFT` — чувствительность микрофонов;
 - `MIC_CHANNELS` — работать с одним микрофоном, если второй бракованный;
@@ -148,18 +158,18 @@ pio device monitor
 **Тесты логики прошивки на ПК:**
 
 ```bash
-pio test -e native
+cd firmware/core && cargo test
 ```
 
 ## 3. Если не работает
 
 | Симптом | Решение |
 |---|---|
-| На экране «Ищу сервер в сети…» | `SERVER_HOST` в `secrets.h`; сервер слушает `0.0.0.0`; порт 8080 открыт в брандмауэре |
-| «Сервер … не отвечает» сразу после подключения | неверный `DEVICE_TOKEN`: в логе сервера будет «отклонено подключение без верного токена» |
+| На экране «Ищу сервер в сети…» | `server_host` в `firmware/esp/cfg.toml`; сервер слушает `0.0.0.0`; порт 8080 открыт в брандмауэре |
+| «Сервер … не отвечает» сразу после подключения | неверный `device_token`: в логе сервера будет «отклонено подключение без верного токена» |
 | Агент серый (недоступен) | веб-панель → «Проверить»; там текст ошибки (нет модели, нет ключа, сервер выключен) |
 | Долго до первого слова | смотри историю в панели: если велико STT — нужна видеокарта или модель Whisper меньше; если первый токен — модель/сервер LLM |
 | «Синтез речи недоступен» | Piper не запущен или неверный `TTS_URL` |
-| В логе «SQLite недоступен — история только в памяти» | не собрался `better-sqlite3` (нет готовой сборки под твою платформу): поставь компилятор (`build-essential` / Visual Studio Build Tools) и сделай `npm install` ещё раз. Колонка работает и без него |
+| В логе «SQLite недоступен — история только в памяти» | нет прав на запись в папку `data/` (или путь `server.db_path` неверный). Колонка работает и без истории |
 
 Проблемы с железом — в [HARDWARE.md](HARDWARE.md#если-что-то-не-работает).

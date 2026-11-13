@@ -102,4 +102,4 @@ curl -H "Authorization: Bearer $T" -H 'Content-Type: application/json' \
      -d '{"text":"Через пять минут выходим!"}' http://localhost:8080/api/devices/column-a1b2c3/say
 ```
 
-**mDNS.** Сервер объявляет сервис `_aicolumn._tcp` (TXT: `path=/ws`). Если в прошивке не указан `SERVER_HOST`, колонка ищет сервер именно так.
+**mDNS.** Сервер объявляет сервис `_aicolumn._tcp` (TXT: `path=/ws`). Если в прошивке не указан `server_host`, колонка ищет сервер именно так.
